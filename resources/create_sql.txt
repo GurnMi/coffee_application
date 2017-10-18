@@ -1,0 +1,25 @@
+-- db 존재하면 삭제
+drop database if exists coffee_project;
+
+-- db 생성
+create database coffee_project;
+
+-- db 사용
+use coffee_project;
+
+-- 커피테이블
+CREATE TABLE if not exists coffee_project.menu (
+    cNo char(11) ,
+    cName char(10),
+    PRIMARY KEY (cNo)
+);
+
+CREATE TABLE if not exists coffee_project.cInput (
+    cNo char(11) ,
+    cName char(10),
+    cPrice int(10),
+    cVolume int(20),
+    cMargin int(20),
+    cAmount int(20),
+    PRIMARY KEY (cNo)
+);
