@@ -5,15 +5,24 @@ public class cInput {
 	private int cPrice;
 	private int Volume;
 	private int Margin;
+	
 	public cInput() {
-		// TODO Auto-generated constructor stub
 	}
+	
+	
 	public cInput(String cNo, int cPrice, int volume, int margin) {
 		this.cNo = cNo;
 		this.cPrice = cPrice;
 		Volume = volume;
 		Margin = margin;
 	}
+
+	
+	public cInput(String cNo) {
+		this.cNo = cNo;
+	}
+
+
 	public String getcNo() {
 		return cNo;
 	}

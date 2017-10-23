@@ -27,11 +27,14 @@ public class Menu {
 	public Menu() {
 		// TODO Auto-generated constructor stub
 	}
-	@Override
+	/*@Override
 	public String toString() {
 		return String.format("Menu [cNo=%s, cName=%s]", cNo, cName);
 	}
-	
-	
+	*/
+	@Override
+	public String toString() {
+		return String.format("%s, %s", cNo, cName);
+	}
 	
 }
