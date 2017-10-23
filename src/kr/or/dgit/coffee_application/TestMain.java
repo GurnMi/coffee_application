@@ -17,6 +17,7 @@ import kr.or.dgit.coffee_application.jdbc.DBCon;
 public class TestMain {
 
 	public static void main(String[] args) {
+		
 		//testDBCon();
 		
 		Menu m1 = new Menu("A001","아메리카노");
@@ -42,28 +43,10 @@ public class TestMain {
 		
 		//searchcInput(input1);
 		
-		//ListAllcOutput();
-		
-		/*try {
-			cInputDao.getInstance().trigger();
-			System.out.println("트리거 생성완료");
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		*/
+		ListAllcOutput();
+		ListAllcOutputM();
 		
 		
-		
-		try {
-			List<cOutput> lists = cOutputDao.getInstance().resultSupply();
-			for(cOutput m:lists){
-				System.out.println(m);
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
 	}
 
@@ -71,6 +54,18 @@ public class TestMain {
 	private static void ListAllcOutput() {
 		try {
 			List<cOutput> lists = cOutputDao.getInstance().selectItemByAll();
+			for(cOutput m:lists){
+				System.out.println(m);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	private static void ListAllcOutputM() {
+		try {
+			List<cOutput> lists = cOutputDao.getInstance().selectItemByAllM();
 			for(cOutput m:lists){
 				System.out.println(m);
 			}
