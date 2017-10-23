@@ -7,6 +7,11 @@ public class Menu {
 		this.cNo = cNo;
 		this.cName = cName;
 	}
+	
+	public Menu(String cNo) {
+		this.cNo = cNo;
+	}
+
 	public String getcNo() {
 		return cNo;
 	}

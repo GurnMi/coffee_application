@@ -7,6 +7,7 @@ create database coffee_project;
 -- db 사용
 use coffee_project;
 
+
 -- 커피테이블
 CREATE TABLE if not exists coffee_project.menu (
     cNo char(11) ,
@@ -16,10 +17,23 @@ CREATE TABLE if not exists coffee_project.menu (
 
 CREATE TABLE if not exists coffee_project.cInput (
     cNo char(11) ,
-    cName char(10),
     cPrice int(10),
-    cVolume int(20),
-    cMargin int(20),
-    cAmount int(20),
-    PRIMARY KEY (cNo)
+    Volume int(20),
+    Margin int(20),
+    PRIMARY KEY (cNo),
+	foreign key (cNo) references menu(cNo)
+	on delete cascade
+);
+
+CREATE TABLE if not exists coffee_project.cOutput (
+    cNo char(11) ,
+    cPrice int(10),
+    Volume int(20),
+    Supply int(20),
+    tax int(20),
+    Amount int(20),
+    Margin int(20),
+    MarginPrice int(20),
+    PRIMARY KEY (cNo),
+    foreign key (cNo) references menu(cNo)
 );
