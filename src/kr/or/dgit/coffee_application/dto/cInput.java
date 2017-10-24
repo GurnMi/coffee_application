@@ -49,7 +49,12 @@ public class cInput {
 	}
 	@Override
 	public String toString() {
-		return String.format("cInput [cNo=%s, cPrice=%s, Volume=%s, Margin=%s]", cNo, cPrice, Volume, Margin);
+		return String.format("%s, %s, %s,%s", cNo, cPrice, Volume, Margin);
+	}
+
+
+	public Object[] toArray() {
+		return  new Object[]{cNo, cPrice, Volume, Margin};
 	}
 	
 	

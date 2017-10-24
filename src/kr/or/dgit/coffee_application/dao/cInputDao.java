@@ -34,23 +34,7 @@ public class cInputDao implements SqlDao<cInput> {
 		}
 	}
 	
-	public void trigger() throws SQLException{
-		String sql = "DELIMITER $$ "
-				+"create trigger insert_sale "
-				+"after insert"+" on cInput"+" for each row "
-				+"begin "
-				+"insert into cOutput values "
-				+"(new.cNo, new.cPrice,new.Volume,(new.cPrice*new.Volume)-ceiling((new.cPrice*new.Volume)/11),"
-				+"ceiling(new.cPrice*new.Volume)/11,new.cPrice*new.Volume,	new.Margin,"
-				+"round(((new.cPrice*new.Volume)-ceiling((new.cPrice*new.Volume)/11))*new.Margin/100))"
-				+"end"
-				+"DELIMITER";
-		Connection con = DBCon.getInstance().getConnection();
-		try (PreparedStatement pstmt = con.prepareStatement(sql);){
-			pstmt.executeUpdate();
-		}
-		
-	}
+	
 
 	@Override
 	public void deleteItem(cInput item) throws SQLException {

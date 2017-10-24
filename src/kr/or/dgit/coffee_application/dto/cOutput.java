@@ -15,6 +15,13 @@ public class cOutput {
 			super();
 			// TODO Auto-generated constructor stub
 		}
+		
+		
+		public cOutput(String cNo) {
+			this.cNo = cNo;
+		}
+
+
 		public cOutput(int crank, String cNo, String cName, int cPrice, int volume, int supply, int tax, int amount,
 				int margin, int marginPrice) {
 			super();
@@ -94,6 +101,11 @@ public class cOutput {
 			return "cOutput [crank=" + crank + ", cNo=" + cNo + ", cName=" + cName + ", cPrice=" + cPrice + ", Volume="
 					+ Volume + ", Supply=" + Supply + ", tax=" + tax + ", Amount=" + Amount + ", Margin=" + Margin
 					+ ", MarginPrice=" + MarginPrice + "]";
+		}
+
+
+		public Object[] toArray() {
+			return new Object[]{crank, cNo, cName, cPrice, Volume, Supply, tax, Amount, Margin, MarginPrice};
 		}
 		
 		

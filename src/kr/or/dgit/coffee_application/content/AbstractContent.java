@@ -4,8 +4,7 @@ import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
 public abstract class AbstractContent<T> extends JPanel {
-	public AbstractContent() {
-	}
+
 	public abstract T getContent();
 	
 	public abstract void setContent(T content);

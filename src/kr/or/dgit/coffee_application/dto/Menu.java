@@ -36,5 +36,9 @@ public class Menu {
 	public String toString() {
 		return String.format("%s, %s", cNo, cName);
 	}
+
+	public Object[] toArray() {
+		return new Object[]{cNo, cName};
+	}
 	
 }

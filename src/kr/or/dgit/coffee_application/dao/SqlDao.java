@@ -3,6 +3,8 @@ package kr.or.dgit.coffee_application.dao;
 import java.sql.SQLException;
 import java.util.List;
 
+import kr.or.dgit.coffee_application.dto.Menu;
+
 public interface SqlDao<T> {
 	int insertItem(T item) throws SQLException;
 	void deleteItem(T item) throws SQLException;
